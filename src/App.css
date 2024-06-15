@@ -1,0 +1,111 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  --red: #cd0609;
+  --pink: #fc26bf;
+}
+
+
+@keyframes textAnimation {
+  from {
+    color: var(--red);
+  }
+  25% {
+    color: var(--pink);
+    filter: drop-shadow(0 0 5px var(--pink)) drop-shadow(0 0 20px var(--pink))
+      drop-shadow(0 0 30px var(--pink));
+  }
+  50% {
+    color: white;
+    filter: drop-shadow(0 0 5px var(--pink)) drop-shadow(0 0 20px var(--pink))
+      drop-shadow(0 0 30px var(--pink));
+  }
+  75% {
+    color: white;
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 20px white)
+      drop-shadow(0 0 50px white);
+  }
+  to {
+    color: white;
+  }
+}
+
+.text {
+  font-size: 10rem;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  color: var(--red);
+  position: relative;
+}
+
+.textAnimation {
+  animation: textAnimation 0.5s ease;
+}
+
+.textParent {
+  position: relative;
+}
+
+.stripes {
+  --offset: calc(100% / 10);
+
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: calc(-1 * var(--offset));
+  height: 20%;
+
+  width: calc(100% + (2 * var(--offset)));
+  background: linear-gradient(
+      55deg,
+      rgb(0, 0, 0) 0%,
+      transparent 20%,
+      transparent 100%,
+      rgb(0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.877) 0%,
+      transparent 20%,
+      transparent 100%,
+      rgb(0, 0, 0) 100%
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--pink),
+      var(--pink) 10%,
+      transparent 10%,
+      transparent 20%
+    );
+}
+
+.btn {
+}
+
+.step1 {
+  color: var(--red);
+}
+
+.step2 {
+  color: var(--pink);
+  filter: drop-shadow(0 0 5px var(--pink)) drop-shadow(0 0 20px var(--pink))
+    drop-shadow(0 0 30px var(--pink));
+}
+
+.step3 {
+  color: white;
+  filter: drop-shadow(0 0 5px var(--pink)) drop-shadow(0 0 20px var(--pink))
+    drop-shadow(0 0 30px var(--pink));
+}
+
+.step4 {
+  color: white;
+  filter: drop-shadow(0 0 5px white) drop-shadow(0 0 20px white)
+    drop-shadow(0 0 50px white);
+}
+
+.step5 {
+  color: white;
+}

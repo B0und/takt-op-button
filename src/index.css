@@ -1,0 +1,17 @@
+:root {
+  color-scheme: dark;
+  color: rgb(234, 234, 234);
+  background-color: #000007;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
